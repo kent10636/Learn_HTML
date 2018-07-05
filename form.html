@@ -1,0 +1,36 @@
+<html>
+    <head>HTML表单</head>
+    <body>
+        <!HTML表单用于搜集不同类型的用户输入,
+        表单元素指不同类型的input元素、复选框、单选按钮、提交按钮等>
+        <!action属性定义了提交表单时执行的动作,若省略action属性,则action默认设置为当前页面>
+        <!form action="action_page.php">
+        
+        <!method属性规定提交表单时的HTTP方法(GET或POST),若省略method属性，则method默认设置为GET>
+        <!form method="GET">  <!表单没有敏感信息时,使用GET,表单数据在页面地址栏中可见>
+        <!form method="POST">  <!表单包含敏感信息(如密码)时,使用POST,被提交的数据在页面地址栏中不可见>   
+        
+        <form>
+            <!fieldset元素用于组合表单中的相关数据,放入一个框形区域中>
+            <fieldset>
+                
+                <!legend元素为fieldset元素定义标题>
+                <legend>Personal information:</legend>
+
+                <!文本输入>
+                First name:<br />
+                <input type="text" name="firstname"><br />
+                Last name:<br />
+                <input type="text" name="lastname"><br /><br />
+
+                <!单选按钮输入>
+                <input type="radio" name="sex" value="male" checked>Male<br />  <!使用name来统一单选范围>
+                <input type="radio" name="sex" value="female">Female<br /><br />
+
+                <!提交按钮>
+                <input type="submit" value="Submit"><br />
+            
+            </fieldset>
+        </form>
+    </body>
+</html>
