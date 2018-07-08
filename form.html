@@ -12,25 +12,114 @@
         
         <form>
             <!fieldset元素用于组合表单中的相关数据,放入一个框形区域中>
-            <fieldset>
-                
+            <fieldset>    
                 <!legend元素为fieldset元素定义标题>
                 <legend>Personal information:</legend>
 
-                <!文本输入>
+                <!文本输入框>
                 First name:<br />
                 <input type="text" name="firstname"><br />
                 Last name:<br />
                 <input type="text" name="lastname"><br /><br />
 
+                <!密码字段>
+                User name:<br />
+                <input type="text" name="username"><br />
+                User password:<br />
+                <!password字段中的字符会被做掩码处理(显示为星号或实心圆)>
+                <input type="password" name="psw"><br /><br />
+
                 <!单选按钮输入>
                 <input type="radio" name="sex" value="male" checked>Male<br />  <!使用name来统一单选范围>
                 <input type="radio" name="sex" value="female">Female<br /><br />
 
-                <!提交按钮>
-                <input type="submit" value="Submit"><br />
-            
+                <!提交表单数据至表单处理程序的按钮(提交当前form中的内容)>
+                <input type="submit" value="Submit"><br /><br />
             </fieldset>
         </form>
+        
+        <form>
+            <fieldset>                
+                <!复选框>
+                <input type="checkbox" name="vehicle" value="Bike">I have a bike<br />
+                <input type="checkbox" name="vehicle" value="Car">I have a car<br /><br />
+    
+                <!只允许输入数字值的字段,可限制最小值和最大值>
+                Quantity (between 1 and 5):<br />
+                <input type="number" name="quantity" min="1" max="5"><br /><br />
+
+                <!日期输入字段,可添加日期限制,出现日期选择器>                    Birthday:<br />
+                <input type="date" name="bday"><br /><br />
+    
+                <!月份、年份输入>
+                Birthday (month and year):<br />
+                <input type="month" name="bdaymonth"><br /><br />
+    
+                <!周、年份输入>
+                Select a week:<br />
+                <input type="week" name="week_year"><br /><br />
+    
+                <!选择颜色输入,出现颜色选择器>
+                Select your favorite color:<br />
+                <input type="color" name="favcolor"><br /><br />
+
+                <!一定范围内数字值输入,出现滑块控件>
+                <input type="range" name="points" min="0" max="10"><br /><br />
+    
+                <!选择时间(无时区),出现时间选择器>
+                Select a time:<br />
+                <input type="time" name="usr_time"><br /><br />
+    
+                <!选择日期和时间(无时区),出现日期选择器>
+                Birthday (date and time):<br />
+                <input type="datetime-local" name="bdaytime"><br /><br />
+
+                <!电子邮件输入字段,提交时自动验证邮件地址>
+                E-mail:<br />
+                <input type="email" name="email"><br /><br />
+
+                <!搜索字段,表现类似常规文本字段>
+                Search Google:<br />
+                <input type="search" name="googlesearch"><br /><br />
+
+                <!URL输入字段,提交时自动验证URL>
+                Add your homepage:<br />
+                <input type="url" name="homepage"><br /><br />
+
+                <input type="submit" value="Submit"><br /><br />
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <!下拉单选列表(不可输入)>
+                <select name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <!默认第一个选项显示为被选选项,通过添加selected属性来定义预定义选项>
+                    <option value="fiat" selected>Fiat</option>
+                    <option value="audi">Audi</option>
+                </select><br /><br />
+
+                <!文本输入区域>
+                <textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+                </textarea><br /><br />
+
+                <!事件响应按钮>
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button><br /><br />
+            
+                <!预定义选项列表(可输入查找)>
+                <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                </datalist>
+                <input list="browsers"><br /><br />
+            </fieldset>
+        </form>
+
     </body>
 </html>
