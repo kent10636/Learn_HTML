@@ -121,5 +121,42 @@ The cat was playing in the garden.
             </fieldset>
         </form>
 
+        <form>
+            <fieldset>
+                <!readonly规定输入字段为只读,不可修改,默认readonly="readonly">
+                <input type="text" name="firstname" value="John" readonly><br /><br />
+
+                <!disabled规定输入字段被禁用,不可点击,不会被提交,默认disabled="disabled">
+                <input type="text" name="firstname" value="John" disabled><br /><br />
+
+                <!size规定输入框的尺寸(按字符计)>
+                <input type="text" name="firstname" value="John" size="40"><br /><br />
+
+                <!maxlength规定输入字段的最大长度>
+                <input type="text" name="firstname" maxlength="10"><br /><br />
+            </fieldset>
+        </form>
+
+        <!novalidate规定在提交表单时不对表单数据进行验证>
+        <!form action="action_page.php" novalidate><!/form>
+        <form>
+            <fieldset>
+                <!autocomplete属性规定表单或输入字段是否应该自动完成>
+                name: <input type="text" name="name" autocomplete="on"><br />
+                E-mail: <input type="email" name="email" autocomplete="off"><br /><br />
+
+                <!autofocus使输入字段在页面加载时自动获得焦点>
+                First name: <input type="text" name="fname" autofocus><br /><br />
+
+                <!required规定在提交表单之前必须填写输入字段>
+                Username: <input type="text" name="usrname" required><br /><br />
+
+                <!step规定输入数字与数字0的合法间隔,如下例的合法数字为:-3、0、3、6>
+                <input type="number" name="points" step="3"><br /><br />
+            
+                <input type="submit" value="Submit"><br /><br />
+            </fieldset>
+        </form>
+    
     </body>
 </html>
